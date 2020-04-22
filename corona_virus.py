@@ -64,9 +64,3 @@ df.to_excel('corona_virus.xlsx', sheet_name='sheet1', index=False)
 df
 print("data stored in excel file : corona_virus.xlxs")
 
-
-# In[ ]:
-
-
-
-
