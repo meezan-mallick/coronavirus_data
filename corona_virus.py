@@ -59,8 +59,12 @@ for r in rows:
 for i in row_list:
     data.append(i)
 
-df = pd.DataFrame(data,columns=['N0','state','Total Confirmed cases','Cured/Discharged','Death'])
-df.to_excel('corona_virus.xlsx', sheet_name='sheet1', index=False)
-df
-print("data stored in excel file : corona_virus.xlxs")
+df = pd.DataFrame(data, columns=['N0', 'state', 'Total Confirmed cases', 'Cured/Discharged', 'Death'])
+#df.to_excel('corona_virus.xlsx', sheet_name='sheet1', index=False)
+
+df = df.drop([0,33,34,35])
+
+sorted_df=df.sort_values(by='Total Confirmed cases',ascending=False)
+
+print(sorted_df[['state','Total Confirmed cases']])
 
