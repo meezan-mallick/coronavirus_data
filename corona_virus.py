@@ -52,7 +52,7 @@ table = soup.find('table',class_="table table-striped")
 
 rows = table.find_all('tr') #it will return the list of tr's from the table
 for r in rows:
-    list_of_td=r.find_all('td') #it will return the list of td's from a particular tr
+    list_of_td = [td.get_text() for td in r.find_all('td')] #it will return the list of td's from a particular tr
     row_list.append(list_of_td)
 
 
