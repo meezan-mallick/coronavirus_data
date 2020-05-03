@@ -1,4 +1,4 @@
-Python script to get corona virus data by Meezan Malek
+#Python script to get corona virus data by Meezan Malek
 
 from bs4 import BeautifulSoup
 import requests
